@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "./scripts/build.prod.sh"
+    "build": "./scripts/build.prod.sh",
+    "test": "npx jest ./test"
   },
   "repository": {
     "type": "git",
