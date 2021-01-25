@@ -10,7 +10,7 @@ describe('Test Greeting Function', () => {
 
 
     test('Test async code', async () => {
-        let result = await makeHttpRequest();
+        let result: any = await makeHttpRequest();
         console.log(result.data)
     });
 });

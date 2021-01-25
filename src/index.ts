@@ -8,7 +8,11 @@ interface Person {
 }
 
 export function makeHttpRequest() {
-    return axios.get('https://jsonplaceholder.typicode.com/todos/1');
+
+    let httpWrapper = process.env.BUILD_TARGET == 'NODE' ? axios.get : fetch;
+    let url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+    return httpWrapper(url);
 }
 
 export function makeImmutableChange(obj: any) {
